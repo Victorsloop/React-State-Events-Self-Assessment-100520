@@ -1,7 +1,7 @@
 // import {render} from '@testing-library/react'
 import React from 'react'
 import {yes,no} from '../objects.js'
-
+// super() calls constructor of parents , required for accessing variables
 class Assessment extends React.Component{
     noObject = { statement: no["no-statement"], image: no["no-image"] }
     yesObject = { statement: yes["yes-statement"], image: yes["yes-image"]}
@@ -9,6 +9,7 @@ class Assessment extends React.Component{
         statement: this.noObject.statement,
         image: this.noObject.image,
     }
+    // console,log(state);
     handleClick = () => {
         if(this.state.statement === this.noObject.statement && this.state.image === this.noObject.image){
             this.setState({
